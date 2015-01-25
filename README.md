@@ -2,7 +2,7 @@
 Corbulo is a modified terminal able to run base/needed computational commands along with added argueably miscellaneous commands.
 
 
-Needed Libraries: 
+# Needed Libraries: 
 - Crypto.Cipher
 
 Can be downloaded from https://pypi.python.org/packages/source/p/pycrypto/pycrypto-2.6.1.tar.gz
@@ -16,6 +16,5 @@ Can be downloaded from https://pypi.python.org/packages/source/S/SpeechRecogniti
 
 Can be downloaded from http://people.csail.mit.edu/hubert/pyaudio/packages/pyaudio-0.2.8.tar.gz
 
-Commands:
+# Commands:
 - Help
-- 
