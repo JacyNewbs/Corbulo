@@ -18,3 +18,30 @@ Can be downloaded from http://people.csail.mit.edu/hubert/pyaudio/packages/pyaud
 
 # Commands:
 - Help
+- search youtube for <query>
+- conversion
+- ip
+- validate_url
+- search amazon for <query>
+- search google for <query>
+- search images for <query>
+- encryption
+- play <song name>
+- exit()
+- cd <directoryname>
+- ls
+- cd
+- weather
+- toggle speech
+- my name is <your name>
+- make a reminder
+- who are you?
+- computer info
+- calculate weight
+- calculate bmi
+- create database
+- wget <URL>
+- lol
+- dawn messenger
+- matrix rain
+- add new custom command
