@@ -7,7 +7,6 @@
 import webbrowser
 import time
 import sys
-import speech_recognition as sr
 import socket as so
 import random
 import platform
@@ -100,10 +99,6 @@ dawnmh2 = "; user will then have to wait until both computers are connected with
 dawnmh3 = "; !NOTE: PROGRAM OPERATES SO THAT USERs WILL ONLY BE ALLOWED TO SEND ONE MESSAGE AT A TIME, USERs WILL HAVE TO WAIT FOR A REPLY TO SEND AGAIN"
 matrixrh = "matrix rain : initiates matrix rain script"
 matrixrh1 = "; script can be stopped by pressing 'Ctrl'+'C'"
-newcustomcommand = "add new custom command : Adds additional custom inputted command"
-newcustomcommand1 = "; !NOTE: MAKE SURE CUSTOM COMMAND IS LOWER CASE"
-newcustomcommand2 = "; python script syntax : new line = '\\n'"
-newcustomcommand3 = "; python script syntax : indents needed in code must be entered by using tab"
 # Welcoming Message
 if "25" in localtime and "Dec" in localtime:
 	print ("Welcome, I Am Corbulo, Merry Christmas and What Would You Like To Do Today?")
@@ -202,15 +197,7 @@ while i != 10:
 		subprocess.Popen(["open", "buzz.mp3"])
 		print ("ALARM: "+linen55)
 		
-	r = sr.Recognizer()
-	with sr.Microphone() as source:
-	    audio = r.listen(source)
-	try:
-		question= ""
-		question = (r.recognize(audio))
-	except LookupError:
-	    print("Could not understand audio")
-	
+	question = raw_input("> ")
 	if "Help" == question or "help" == question or "?" == question:
 		os.system('clear')
 		print ("\033[1m"+"> Commands:"+"\033[0m")
@@ -264,11 +251,6 @@ while i != 10:
 		print (dawnmh2)
 		print (dawnmh3)
 		print (matrixrh)
-		print (matrixrh1)
-		print (newcustomcommand)
-		print (newcustomcommand1)
-		print (newcustomcommand2)
-		print (newcustomcommand3)
 		print (exith)
 	elif "search youtube for" in question or "Search_Youtube for" in question or "Search youtube for" in question or "search Youtube for" in question or "search youtube For" in question or "Search Youtube For" in question or "Search youtube For" in question or "search Youtube For" in question:
 		sptext = question.split(" ") 
@@ -498,7 +480,7 @@ while i != 10:
 					popf = (lst+" Nautical Mile(s)")
 					if speak == 1:
 						os.system("say "+popf)
-	elif "Hello" == question or "Hi" == question or "hello" == question or "hi" == question:
+	elif "Hello" == question or "Hi" == question or "hello" == question or "hi" == question or "hello there" == question or "hello there corbulo" == question:
 		print ("Greetings Human..")
 		if speak == 1:
 			os.system("say 'Greetings Human'")
@@ -632,7 +614,7 @@ while i != 10:
 		print lolp
 		if speak == 1:
 			os.system("say "+lolps) 
-	elif "Toggle Speech" == question or "toggle speech" == question or "Toggle speech" == question or "toggle Speech" == question or "turn speech on" == question or "turn speech off" == question:
+	elif "Toggle_Speech" == question or "toggle_speech" == question or "Toggle_speech" == question or "toggle_Speech" == question:
 		if speak == 1:
 			speak = (speak-1)
 			print ("> Speech output is toggled off")
@@ -660,7 +642,7 @@ while i != 10:
 		print (rs)
 		if speak == 1:
 			os.system("say "+rss)
-	elif "who are you" == question:
+	elif "who are you?" == question:
 		print ("> Me?")
 		time.sleep(2)
 		print ("> I am Corbulo, named after Gnaeus Domitius Corbulo, a Roman general who believed in honour and legacy.")
@@ -1007,7 +989,7 @@ while i != 10:
 		while 1: 
 			c = ""
 			d = getkey()
-			if d == "\n":
+			if d == "\n":     ## break on a Return/Enter keypress
 				break
 			d = str(d)
 			s = str(s+d)
@@ -1030,8 +1012,6 @@ while i != 10:
 				checkrepeattimes = (checkrepeattimes + 1)
 		elif speak != 1:
 			print ("Speech Must Be Toggled On First! This Can Be Done By Using The Command 'toggle_speech' ")
-	elif question == "execute protocol 117":
-		print ("John 117 activated!")
 	elif "add new custom command" == question:
 		file = open("customdictone.txt", "a")
 		questioncmd = raw_input("> Enter custom command: ")
