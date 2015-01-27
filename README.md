@@ -74,3 +74,5 @@ Can be downloaded from http://people.csail.mit.edu/hubert/pyaudio/packages/pyaud
  - MAKE IT RAIN
 - add new custom command
  - Allows user to create personalized command within file
+- live binary translate
+ - Live type-to-binary translate/conversion
