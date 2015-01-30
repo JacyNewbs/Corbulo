@@ -104,6 +104,8 @@ newcustomcommand = "add new custom command : Adds additional custom inputted com
 newcustomcommand1 = "; !NOTE: MAKE SURE CUSTOM COMMAND IS LOWER CASE"
 newcustomcommand2 = "; python script syntax : new line = '\\n'"
 newcustomcommand3 = "; python script syntax : indents needed in code must be entered by using tab"
+lbt = "live binary translate : live typing translated into binary"
+lbt1 = "; !NOTE: PRESS 'enter' TO EXIT SCRIPT"
 # Welcoming Message
 if "25" in localtime and "Dec" in localtime:
 	print ("Welcome, I Am Corbulo, Merry Christmas and What Would You Like To Do Today?")
@@ -269,6 +271,8 @@ while i != 10:
 		print (newcustomcommand1)
 		print (newcustomcommand2)
 		print (newcustomcommand3)
+		print (lbt)
+		print (lbt1)
 		print (exith)
 	elif "search youtube for" in question or "Search_Youtube for" in question or "Search youtube for" in question or "search Youtube for" in question or "search youtube For" in question or "Search Youtube For" in question or "Search youtube For" in question or "search Youtube For" in question:
 		sptext = question.split(" ") 
