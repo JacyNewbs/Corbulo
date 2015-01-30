@@ -99,6 +99,8 @@ dawnmh2 = "; user will then have to wait until both computers are connected with
 dawnmh3 = "; !NOTE: PROGRAM OPERATES SO THAT USERs WILL ONLY BE ALLOWED TO SEND ONE MESSAGE AT A TIME, USERs WILL HAVE TO WAIT FOR A REPLY TO SEND AGAIN"
 matrixrh = "matrix rain : initiates matrix rain script"
 matrixrh1 = "; script can be stopped by pressing 'Ctrl'+'C'"
+lbt = "live binary translate : live typing translated into binary"
+lbt1 = "; !NOTE: PRESS 'enter' TO EXIT SCRIPT"
 # Welcoming Message
 if "25" in localtime and "Dec" in localtime:
 	print ("Welcome, I Am Corbulo, Merry Christmas and What Would You Like To Do Today?")
@@ -251,6 +253,8 @@ while i != 10:
 		print (dawnmh2)
 		print (dawnmh3)
 		print (matrixrh)
+		print (lbt)
+		print (lbt1)
 		print (exith)
 	elif "search youtube for" in question or "Search_Youtube for" in question or "Search youtube for" in question or "search Youtube for" in question or "search youtube For" in question or "Search Youtube For" in question or "Search youtube For" in question or "search Youtube For" in question:
 		sptext = question.split(" ") 
