@@ -29,27 +29,27 @@ Corbulo is a modified terminal able to run base/needed computational commands al
 # Commands:
 - help
  - Shows list of available commands
-- search youtube for <query>
+- search youtube for (query)
  - Search query on youtube
 - conversion
  - Initiates conversion choices
 - ip
  - Shows user's internal and external IP address
-- validate_url
+- validate_url (URL)
  - Tests validity of URL
-- search amazon for <query>
+- search amazon for (query)
  - Searches amazon for query
-- search google for <query>
+- search google for (query)
  - Searches google for query
-- search images for <query>
+- search images for (query)
  - Searches images on google for query
 - encryption
  - Initiates encryption/decryption of text script
-- play <song name>
+- play (song name)
  - Plays song with corresponding name in "Music" directory in same directory as CORBULO program
 - exit()
  - Exits program
-- cd <directoryname> 
+- cd (directoryname) 
  - Loads into inputted directory
 - ls
  - Shows inventory of direcory
@@ -74,7 +74,7 @@ Corbulo is a modified terminal able to run base/needed computational commands al
 - create database
  - Initiates database creation script
   - Gives user choice to create a personalized database management python file
-- wget <URL>
+- wget (URL)
  - Downloads file from given URL
 - lol
  - hahaha
@@ -86,3 +86,5 @@ Corbulo is a modified terminal able to run base/needed computational commands al
  - Allows user to create personalized command within file
 - live binary translate
  - Live type-to-binary translate/conversion
+- open webpage (URL)
+ - Opens URL in default web browser
