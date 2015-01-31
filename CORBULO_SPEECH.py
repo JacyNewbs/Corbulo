@@ -13,6 +13,7 @@ import random
 import platform
 from socket import *
 import urllib
+from os.path import expanduser
 import urllib2
 from urllib2 import Request, urlopen
 from Crypto.Cipher import AES
@@ -37,6 +38,8 @@ i = 0
 pathcd = "/Users/JacobN"
 path = ""
 speak = 0
+home = expanduser("~")
+home = (home+"/CORBULO/")
 linef1 = ("")
 linef2 = ("")
 linef3 = ("")
@@ -114,9 +117,9 @@ else:
 # While Loop Begins
 while i != 10:
 # Reminder Checking Process
-	file = open('temp.txt','r')
+	file = open(home+'temp.txt','r')
 	lines=file.readlines()
-	num = sum(1 for line in open('temp.txt'))
+	num = sum(1 for line in open(home+'temp.txt'))
 	if num == 1:
 		sptext = line1.split(" ") 
 		linen11= " ".join(sptext[3:len(sptext)])
@@ -189,19 +192,19 @@ while i != 10:
 	checkf = str(checkf)
 	check = p.rsplit(' ', 1)[0]
 	if linef1 == check:
-		subprocess.Popen(["open", "buzz.mp3"])
+		subprocess.Popen(["open", home+"buzz.mp3"])
 		print ("ALARM: "+linen11)
 	elif linef2 == check:
-		subprocess.Popen(["open", "buzz.mp3"])
+		subprocess.Popen(["open", home+"buzz.mp3"])
 		print ("ALARM: "+linen22)
 	elif linef3 == check:
-		subprocess.Popen(["open", "buzz.mp3"])
+		subprocess.Popen(["open", home+"buzz.mp3"])
 		print ("ALARM: "+linen33)
 	elif linef4 == check:
-		subprocess.Popen(["open", "buzz.mp3"])
+		subprocess.Popen(["open", home+"buzz.mp3"])
 		print ("ALARM: "+linen44)
 	elif linef5 == check:
-		subprocess.Popen(["open", "buzz.mp3"])
+		subprocess.Popen(["open", home+"buzz.mp3"])
 		print ("ALARM: "+linen55)
 		
 	r = sr.Recognizer()
@@ -1037,17 +1040,17 @@ while i != 10:
 	elif question == "execute protocol 117":
 		print ("John 117 activated!")
 	elif "add new custom command" == question:
-		file = open("customdictone.txt", "a")
+		file = open(home+"customdictone.txt", "a")
 		questioncmd = raw_input("> Enter custom command: ")
 		tagcommand = raw_input("> Enter python script executed(use 'help' command to see needed syntax): ")
 		leel = str(questioncmd+":"+tagcommand+"\n\n")
 		file.write(leel)
 		file.close()
 	else:
-		file = open("customdictone.txt", "r")
+		file = open(home+"customdictone.txt", "r")
 		linecheck = 0
 		lines=file.readlines()
-		num = sum(1 for line in open("customdictone.txt"))
+		num = sum(1 for line in open(home+"customdictone.txt"))
 		while num != linecheck:
 			lol = lines[linecheck]
 			word = lol.split(':', 1)[0]
