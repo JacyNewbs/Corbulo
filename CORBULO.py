@@ -17,6 +17,7 @@ from urllib2 import Request, urlopen
 from Crypto.Cipher import AES
 import string
 import base64
+from os.path import expanduser
 import termios
 import json
 import time
@@ -35,6 +36,8 @@ i = 0
 # Defining Base Variables
 pathcd = "/Users/JacobN"
 path = ""
+home = expanduser("~")
+home = (home+"/CORBULO/")
 speak = 0
 linef1 = ("")
 linef2 = ("")
@@ -99,8 +102,13 @@ dawnmh2 = "; user will then have to wait until both computers are connected with
 dawnmh3 = "; !NOTE: PROGRAM OPERATES SO THAT USERs WILL ONLY BE ALLOWED TO SEND ONE MESSAGE AT A TIME, USERs WILL HAVE TO WAIT FOR A REPLY TO SEND AGAIN"
 matrixrh = "matrix rain : initiates matrix rain script"
 matrixrh1 = "; script can be stopped by pressing 'Ctrl'+'C'"
+newcustomcommand = "add new custom command : Adds additional custom inputted command"
+newcustomcommand1 = "; !NOTE: MAKE SURE CUSTOM COMMAND IS LOWER CASE"
+newcustomcommand2 = "; python script syntax : new line = '\\n'"
+newcustomcommand3 = "; python script syntax : indents needed in code must be entered by using tab"
 lbt = "live binary translate : live typing translated into binary"
 lbt1 = "; !NOTE: PRESS 'enter' TO EXIT SCRIPT"
+owp = "open webpage <URL> : Loads webpage"
 # Welcoming Message
 if "25" in localtime and "Dec" in localtime:
 	print ("Welcome, I Am Corbulo, Merry Christmas and What Would You Like To Do Today?")
@@ -109,9 +117,9 @@ else:
 # While Loop Begins
 while i != 10:
 # Reminder Checking Process
-	file = open('temp.txt','r')
+	file = open(home+"temp.txt","r")
 	lines=file.readlines()
-	num = sum(1 for line in open('temp.txt'))
+	num = sum(1 for line in open(home="temp.txt"))
 	if num == 1:
 		sptext = line1.split(" ") 
 		linen11= " ".join(sptext[3:len(sptext)])
@@ -184,19 +192,19 @@ while i != 10:
 	checkf = str(checkf)
 	check = p.rsplit(' ', 1)[0]
 	if linef1 == check:
-		subprocess.Popen(["open", "buzz.mp3"])
+		subprocess.Popen(["open", home+"buzz.mp3"])
 		print ("ALARM: "+linen11)
 	elif linef2 == check:
-		subprocess.Popen(["open", "buzz.mp3"])
+		subprocess.Popen(["open", home+"buzz.mp3"])
 		print ("ALARM: "+linen22)
 	elif linef3 == check:
-		subprocess.Popen(["open", "buzz.mp3"])
+		subprocess.Popen(["open", home+"buzz.mp3"])
 		print ("ALARM: "+linen33)
 	elif linef4 == check:
-		subprocess.Popen(["open", "buzz.mp3"])
+		subprocess.Popen(["open", home+"buzz.mp3"])
 		print ("ALARM: "+linen44)
 	elif linef5 == check:
-		subprocess.Popen(["open", "buzz.mp3"])
+		subprocess.Popen(["open", home+"buzz.mp3"])
 		print ("ALARM: "+linen55)
 		
 	question = raw_input("> ")
@@ -253,8 +261,14 @@ while i != 10:
 		print (dawnmh2)
 		print (dawnmh3)
 		print (matrixrh)
+		print (matrixrh1)
+		print (newcustomcommand)
+		print (newcustomcommand1)
+		print (newcustomcommand2)
+		print (newcustomcommand3)
 		print (lbt)
 		print (lbt1)
+		print (owp)
 		print (exith)
 	elif "search youtube for" in question or "Search_Youtube for" in question or "Search youtube for" in question or "search Youtube for" in question or "search youtube For" in question or "Search Youtube For" in question or "Search youtube For" in question or "search Youtube For" in question:
 		sptext = question.split(" ") 
@@ -581,8 +595,6 @@ while i != 10:
 		osname = platform.system()
 		if "darwin" == osname or "Darwin" == osname or "Linux" == osname or "linux" == osname:
 			os.system('clear')
-		elif "window" in osname or "Window" in osname:
-			os.system("cls")
 	elif "ls" == question or "LS" == question:
 		dirList=os.listdir(pathcd)
 		f = dirList
@@ -620,10 +632,10 @@ while i != 10:
 			os.system("say "+lolps) 
 	elif "Toggle_Speech" == question or "toggle_speech" == question or "Toggle_speech" == question or "toggle_Speech" == question:
 		if speak == 1:
-			speak = (speak-1)
+			speak = 0
 			print ("> Speech output is toggled off")
 		elif speak == 0:
-			speak = (speak+1)
+			speak = 1
 			print ("> Speach output is toggled on")
 	elif "my name is " in question or "My name is " in question or "my Name is " in question or "my name Is " in question or "My Name is " in question or "my Name Is " in question or "My Name Is " in question:
 		sptext = question.split(" ") 
@@ -1017,17 +1029,23 @@ while i != 10:
 		elif speak != 1:
 			print ("Speech Must Be Toggled On First! This Can Be Done By Using The Command 'toggle_speech' ")
 	elif "add new custom command" == question:
-		file = open("customdictone.txt", "a")
+		file = open(home+"customdictone.txt", "a")
 		questioncmd = raw_input("> Enter custom command: ")
 		tagcommand = raw_input("> Enter python script executed(use 'help' command to see needed syntax): ")
 		leel = str(questioncmd+":"+tagcommand+"\n\n")
 		file.write(leel)
 		file.close()
+	elif "open webpage" in question or "Open Webpage" in question or "Open webpage" in question or "open Webpage" in question:
+		sptext = question.split(" ") 
+		webpage = " ".join(sptext[2:len(sptext)])
+		if "http://" not in webpage or "www." not in webpage:
+			print ("> Remember to have 'http://www.' before!")
+		webbrowser.open(webpage)
 	else:
-		file = open("customdictone.txt", "r")
+		file = open(home+"customdictone.txt", "r")
 		linecheck = 0
 		lines=file.readlines()
-		num = sum(1 for line in open("customdictone.txt"))
+		num = sum(1 for line in open(home+"customdictone.txt"))
 		while num != linecheck:
 			lol = lines[linecheck]
 			word = lol.split(':', 1)[0]
