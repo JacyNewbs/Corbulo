@@ -1,2 +1,5 @@
+<<<<<<< HEAD
 customc:print ('hello i am jacob')
+=======
+>>>>>>> FETCH_HEAD
 
