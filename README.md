@@ -7,7 +7,7 @@ Corbulo is a modified terminal able to run base/needed computational commands al
 - CORBULO_SPEECH.py
  - Speech Recognition enabled Corbulo file, all commands included
 - SETUP.py
- - Download repo as zip, unzip and then run SETUP.py first as this file will setup the needed envrionment for Corbulo to run
+ - Download repo as zip, unzip and then run SETUP.py first as this file will setup the needed envrionment for Corbulo to run (not including installing needed libraries)
 
 
 # Needed Libraries: 
