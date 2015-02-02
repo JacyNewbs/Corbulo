@@ -1,6 +1,6 @@
 # Corbulo
 Corbulo is a modified terminal able to run base/needed computational commands along with added argueably miscellaneous commands.
-##!NOTE: Download as zip then follow instructions under serup.py
+##!NOTE: Download as zip then follow instructions under setup.py
 # Files Available
 - CORBULO.py
  - Main Corbulo file, all commands included
