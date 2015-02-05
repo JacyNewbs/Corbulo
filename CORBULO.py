@@ -119,7 +119,7 @@ while i != 10:
 # Reminder Checking Process
 	file = open(home+"temp.txt","r")
 	lines=file.readlines()
-	num = sum(1 for line in open(home="temp.txt"))
+	num = sum(1 for line in open(home+"temp.txt"))
 	if num == 1:
 		sptext = line1.split(" ") 
 		linen11= " ".join(sptext[3:len(sptext)])
